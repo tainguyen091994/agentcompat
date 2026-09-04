@@ -1,0 +1,26 @@
+id: skill-frontmatter-metadata
+title: metadata
+area: skill-frontmatter
+summary: >
+  Free-form map for the author's own tooling.
+detect: frontmatter
+key: metadata
+support:
+  claude-code:
+    status: partial
+    note: "Stored for your own tooling to read. Claude Code does not act on the contents and drops a value that is not a map."
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: partial
+    note: "Reads author and short-description out of it."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

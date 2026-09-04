@@ -1,0 +1,68 @@
+name: Fill in a cell
+description: Report how one feature behaves on one agent
+title: "data: <feature> on <agent>"
+labels: ["data", "good first issue", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One feature, one agent. Run `npx agentcompat missing` to see what is open.
+
+  - type: input
+    id: feature
+    attributes:
+      label: Feature id
+      placeholder: skill-frontmatter-model
+    validations:
+      required: true
+
+  - type: input
+    id: agent
+    attributes:
+      label: Agent id
+      placeholder: cursor
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: What happens
+      options:
+        - supported (works as documented)
+        - unsupported (errors, or no equivalent exists)
+        - partial (works, but not fully or not the same way)
+        - ignored (accepted without complaint, then does nothing)
+    validations:
+      required: true
+
+  - type: textarea
+    id: note
+    attributes:
+      label: What actually happens
+      description: One sentence. Required for partial, ignored, and unsupported.
+
+  - type: input
+    id: evidence
+    attributes:
+      label: Evidence URL
+      description: A docs deep link, a source permalink, or a gist showing your test run.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: method
+    attributes:
+      label: How do you know?
+      options:
+        - tested (I ran it)
+        - docs (the documentation says so)
+        - source (I read the code)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Agent version you checked
+      placeholder: "2.1.199"

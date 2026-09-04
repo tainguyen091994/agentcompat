@@ -1,0 +1,56 @@
+{
+  "name": "agentcompat",
+  "version": "0.1.0",
+  "description": "Which agent extension features actually work on which agent. A compatibility matrix for skills, hooks, MCP and plugins across Claude Code, Grok Build, Cursor, Codex and Gemini CLI, plus a linter that warns when a field is silently ignored.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tainguyen091994/agentcompat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tainguyen091994/agentcompat/issues"
+  },
+  "homepage": "https://github.com/tainguyen091994/agentcompat#readme",
+  "bin": {
+    "agentcompat": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/cli.js check --write README.md",
+    "table": "npm run build && node dist/cli.js table --notes --write README.md",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude-code",
+    "grok-build",
+    "cursor",
+    "codex",
+    "gemini-cli",
+    "agent-skills",
+    "mcp",
+    "compatibility",
+    "caniuse"
+  ],
+  "dependencies": {
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.2"
+  }
+}

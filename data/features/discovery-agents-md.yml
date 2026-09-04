@@ -1,0 +1,18 @@
+id: discovery-agents-md
+title: AGENTS.md
+area: discovery
+summary: >
+  Vendor-neutral instruction file.
+detect: path
+key: AGENTS.md
+support:
+  claude-code:
+    status: unknown
+  grok-build:
+    status: unknown
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

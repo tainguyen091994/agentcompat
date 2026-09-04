@@ -1,0 +1,39 @@
+name: Add an agent
+description: Track another coding agent in the matrix
+title: "agent: <name>"
+labels: ["agent", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adding an agent is one entry in `data/agents.yml`. Every feature then shows a `?` for it, and filling those in becomes the work.
+
+  - type: input
+    id: name
+    attributes:
+      label: Agent name
+      placeholder: Windsurf
+    validations:
+      required: true
+
+  - type: input
+    id: docs
+    attributes:
+      label: Documentation URL
+    validations:
+      required: true
+
+  - type: textarea
+    id: extensions
+    attributes:
+      label: How does it load extensions?
+      description: Skills, rules, hooks, MCP servers, plugins. Where do the files live, and what are they called?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: claim
+    attributes:
+      label: Do you use this agent?
+      options:
+        - label: Yes, and I can fill in some of its cells

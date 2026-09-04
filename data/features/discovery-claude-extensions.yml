@@ -1,0 +1,26 @@
+id: discovery-claude-extensions
+title: .claude/ extensions
+area: discovery
+summary: >
+  Whether the agent loads another vendor's plugins, skills, MCP servers, agents and hooks out of .claude/ without configuration.
+detect: path
+key: .claude
+support:
+  claude-code:
+    status: supported
+    note: "Its own directory."
+    evidence: https://code.claude.com/docs/en/memory
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    note: "Auto-discovers Claude Code marketplaces, plugins, skills, MCP servers, agents and hooks with zero configuration."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

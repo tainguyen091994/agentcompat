@@ -1,0 +1,22 @@
+id: marketplace-source-sha-pin
+title: source commit pinning
+area: marketplace
+summary: >
+  Whether a marketplace entry can pin a remote plugin source to an exact commit.
+detect: json-key
+key: sha
+support:
+  claude-code:
+    status: unknown
+  grok-build:
+    status: supported
+    note: "The official marketplace requires a pinned commit SHA for remote sources."
+    evidence: https://github.com/xai-org/plugin-marketplace
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

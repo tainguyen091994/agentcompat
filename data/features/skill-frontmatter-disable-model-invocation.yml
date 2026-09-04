@@ -1,0 +1,24 @@
+id: skill-frontmatter-disable-model-invocation
+title: disable-model-invocation
+area: skill-frontmatter
+summary: >
+  Stops the agent loading the skill on its own, leaving it available as a slash command.
+detect: frontmatter
+key: disable-model-invocation
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

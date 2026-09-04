@@ -1,0 +1,27 @@
+id: skill-frontmatter-compatibility
+title: compatibility
+area: skill-frontmatter
+summary: >
+  Environment requirements for the skill, from the Agent Skills spec.
+detect: frontmatter
+key: compatibility
+spec: https://agentskills.io
+support:
+  claude-code:
+    status: ignored
+    note: "Accepted, capped at 500 characters, and never acted on."
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: ignored
+    note: "Accepted and never applied."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

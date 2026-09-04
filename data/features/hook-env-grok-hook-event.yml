@@ -1,0 +1,25 @@
+id: hook-env-grok-hook-event
+title: GROK_HOOK_EVENT
+area: hook-environment
+summary: >
+  Lifecycle event that fired the hook.
+detect: env
+key: GROK_HOOK_EVENT
+support:
+  claude-code:
+    status: unsupported
+    note: "Not in the documented environment. Claude Code passes the same information as JSON on stdin instead."
+    evidence: https://code.claude.com/docs/en/hooks
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

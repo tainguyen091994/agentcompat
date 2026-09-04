@@ -1,0 +1,75 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  data:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: ["20", "22"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Validate every data file
+        run: node dist/cli.js check
+      - name: The README table must match the data
+        run: node dist/cli.js check --write README.md
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      # A fixture that leans on fields one agent silently ignores. The linter
+      # has to notice, or it is not doing its job.
+      - name: Build a project that relies on ignored behaviour
+        run: |
+          mkdir -p fixture/.claude/skills/demo fixture/.claude/hooks
+          cat > fixture/.claude/skills/demo/SKILL.md <<'SKILL'
+          ---
+          name: demo
+          description: Uses fields that do not behave the same everywhere.
+          model: opus
+          allowed-tools: Bash, Read
+          ---
+
+          Body.
+          SKILL
+          printf '#!/usr/bin/env bash\necho "$CLAUDE_PROJECT_DIR"\n' > fixture/.claude/hooks/start.sh
+
+      - name: The linter must flag it
+        run: |
+          set +e
+          node dist/cli.js lint fixture
+          code=$?
+          if [ "$code" -ne 1 ]; then
+            echo "expected exit 1 from the fixture, got $code"
+            exit 1
+          fi
+
+      - name: A project using nothing divergent must stay quiet
+        run: |
+          mkdir -p clean/.claude/skills/plain
+          printf -- '---\nname: plain\ndescription: Uses only fields both agents honour.\n---\n\nBody.\n' \
+            > clean/.claude/skills/plain/SKILL.md
+          node dist/cli.js lint clean

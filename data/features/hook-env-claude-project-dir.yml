@@ -1,0 +1,25 @@
+id: hook-env-claude-project-dir
+title: CLAUDE_PROJECT_DIR
+area: hook-environment
+summary: >
+  Project root where the session started.
+detect: env
+key: CLAUDE_PROJECT_DIR
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/hooks
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: unsupported
+    note: "Not set. The nearest equivalent carries a GROK_ prefix, so a hook written for one agent reads an empty value on the other."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

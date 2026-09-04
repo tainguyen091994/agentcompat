@@ -1,0 +1,26 @@
+id: skill-frontmatter-model
+title: model
+area: skill-frontmatter
+summary: >
+  Model to use while the skill is active.
+detect: frontmatter
+key: model
+support:
+  claude-code:
+    status: supported
+    note: "Overrides the model for the rest of the turn."
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: ignored
+    note: "Accepted by the parser and never applied. The session model is used instead, with no warning."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

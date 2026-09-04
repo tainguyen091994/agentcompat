@@ -1,0 +1,24 @@
+id: skill-frontmatter-description
+title: description
+area: skill-frontmatter
+summary: >
+  What the skill does and when to use it. The agent reads this to decide whether to load the skill.
+detect: frontmatter
+key: description
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

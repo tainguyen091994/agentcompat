@@ -1,0 +1,25 @@
+id: hook-env-claude-plugin-data
+title: CLAUDE_PLUGIN_DATA
+area: hook-environment
+summary: >
+  Persistent data directory for the plugin that owns the hook.
+detect: env
+key: CLAUDE_PLUGIN_DATA
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/hooks
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: unsupported
+    note: "Not set. The nearest equivalent carries a GROK_ prefix, so a hook written for one agent reads an empty value on the other."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

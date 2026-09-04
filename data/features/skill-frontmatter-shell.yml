@@ -1,0 +1,21 @@
+id: skill-frontmatter-shell
+title: shell
+area: skill-frontmatter
+summary: >
+  Shell used for inline command substitution in the skill body.
+detect: frontmatter
+key: shell
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: unknown
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

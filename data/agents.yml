@@ -1,0 +1,25 @@
+# Agents tracked by the matrix. Adding one is a pull request.
+- id: claude-code
+  name: Claude Code
+  vendor: Anthropic
+  docs: https://code.claude.com/docs
+
+- id: grok-build
+  name: Grok Build
+  vendor: xAI
+  docs: https://docs.x.ai/build/overview
+
+- id: cursor
+  name: Cursor
+  vendor: Anysphere
+  docs: https://docs.cursor.com
+
+- id: codex
+  name: Codex CLI
+  vendor: OpenAI
+  docs: https://developers.openai.com/codex
+
+- id: gemini-cli
+  name: Gemini CLI
+  vendor: Google
+  docs: https://google-gemini.github.io/gemini-cli

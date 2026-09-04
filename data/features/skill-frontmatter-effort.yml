@@ -1,0 +1,26 @@
+id: skill-frontmatter-effort
+title: effort
+area: skill-frontmatter
+summary: >
+  Effort or reasoning level to use while the skill is active.
+detect: frontmatter
+key: effort
+support:
+  claude-code:
+    status: supported
+    note: "Overrides the session effort level."
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: ignored
+    note: "Accepted and never applied."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

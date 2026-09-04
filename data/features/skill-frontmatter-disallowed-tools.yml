@@ -1,0 +1,21 @@
+id: skill-frontmatter-disallowed-tools
+title: disallowed-tools
+area: skill-frontmatter
+summary: >
+  Tools removed from the pool while the skill is active.
+detect: frontmatter
+key: disallowed-tools
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: unknown
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

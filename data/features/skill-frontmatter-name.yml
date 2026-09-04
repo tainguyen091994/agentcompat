@@ -1,0 +1,24 @@
+id: skill-frontmatter-name
+title: name
+area: skill-frontmatter
+summary: >
+  Display name for the skill. Both agents fall back to the directory name when it is absent.
+detect: frontmatter
+key: name
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

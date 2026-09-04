@@ -1,0 +1,25 @@
+id: discovery-claude-md
+title: CLAUDE.md
+area: discovery
+summary: >
+  Instruction file read at session start.
+detect: path
+key: CLAUDE.md
+support:
+  claude-code:
+    status: supported
+    evidence: https://code.claude.com/docs/en/memory
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    note: "Read alongside Grok's own files, with no configuration."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

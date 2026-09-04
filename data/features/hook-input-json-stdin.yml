@@ -1,0 +1,21 @@
+id: hook-input-json-stdin
+title: JSON payload on stdin
+area: hook-input
+summary: >
+  How a hook receives its context. This is a structural difference, not a naming one: a hook that parses stdin JSON has nothing to read on an agent that passes environment variables instead.
+detect: none
+support:
+  claude-code:
+    status: supported
+    note: "Every command hook receives a JSON object on stdin with session_id, cwd, hook_event_name, tool_name and tool_input."
+    evidence: https://code.claude.com/docs/en/hooks
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: unknown
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

@@ -1,0 +1,25 @@
+id: hook-env-grok-plugin-data
+title: GROK_PLUGIN_DATA
+area: hook-environment
+summary: >
+  Persistent data directory for the plugin that owns the hook.
+detect: env
+key: GROK_PLUGIN_DATA
+support:
+  claude-code:
+    status: unsupported
+    note: "Not in the documented environment. Claude Code passes the same information as JSON on stdin instead."
+    evidence: https://code.claude.com/docs/en/hooks
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: supported
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown

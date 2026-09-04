@@ -1,0 +1,26 @@
+id: skill-frontmatter-allowed-tools
+title: allowed-tools
+area: skill-frontmatter
+summary: >
+  Tools the skill may use without asking the user. The two agents disagree about what this field does, which matters for security.
+detect: frontmatter
+key: allowed-tools
+support:
+  claude-code:
+    status: supported
+    note: "Pre-approves the listed tools for the turn that invokes the skill."
+    evidence: https://code.claude.com/docs/en/skills
+    checked: 2026-09-04
+    method: docs
+  grok-build:
+    status: ignored
+    note: "Parsed, but it neither grants nor restricts tools. A skill relying on it for a permission grant silently gets nothing."
+    evidence: https://docs.x.ai/build/features/skills-plugins-marketplaces
+    checked: 2026-09-04
+    method: docs
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: unknown
