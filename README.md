@@ -102,6 +102,15 @@ agentcompat check                     # validate the data files
 
 - `source commit pinning` on Grok Build: The official marketplace requires a pinned commit SHA for remote sources. ([evidence](https://github.com/xai-org/plugin-marketplace))
 
+### mcp
+
+| Feature | Claude Code | Grok Build | Cursor | Codex CLI | Gemini CLI |
+|---|---|---|---|---|---|
+| `MCP server configuration` | yes | ? | ? | ? | yes |
+
+- `MCP server configuration` on Claude Code: Project and user scopes use mcpServers in .mcp.json or ~/.claude.json; stdio and HTTP transports are documented. ([evidence](https://code.claude.com/docs/en/mcp))
+- `MCP server configuration` on Gemini CLI: settings.json uses a top-level mcpServers object and supports stdio, SSE, and HTTP transports with user/project scope. ([evidence](https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html))
+
 ### skill-frontmatter
 
 | Feature | Claude Code | Grok Build | Cursor | Codex CLI | Gemini CLI |
@@ -141,7 +150,7 @@ agentcompat check                     # validate the data files
 - `model` on Grok Build: Accepted by the parser and never applied. The session model is used instead, with no warning. ([evidence](https://docs.x.ai/build/features/skills-plugins-marketplaces))
 - `user-invocable` on Grok Build: Only the literal value true counts. Other truthy values are not recognised. ([evidence](https://docs.x.ai/build/features/skills-plugins-marketplaces))
 
-60 of 180 cells are filled in (33%). Every `?` is an open question, and filling one in is a pull request.
+62 of 185 cells are filled in (34%). Every `?` is an open question, and filling one in is a pull request.
 
 <!-- agentcompat:table:end -->
 
