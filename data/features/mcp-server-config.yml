@@ -1,0 +1,27 @@
+id: mcp-server-config
+title: MCP server configuration
+area: mcp
+summary: >
+  Named MCP servers configured with a command or remote URL, optional
+  environment/headers, and an explicit project or user scope.
+detect: json-key
+key: mcpServers
+support:
+  claude-code:
+    status: supported
+    note: "Project and user scopes use mcpServers in .mcp.json or ~/.claude.json; stdio and HTTP transports are documented."
+    evidence: https://code.claude.com/docs/en/mcp
+    checked: 2026-09-16
+    method: docs
+  grok-build:
+    status: unknown
+  cursor:
+    status: unknown
+  codex:
+    status: unknown
+  gemini-cli:
+    status: supported
+    note: "settings.json uses a top-level mcpServers object and supports stdio, SSE, and HTTP transports with user/project scope."
+    evidence: https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html
+    checked: 2026-09-16
+    method: docs
